@@ -1,0 +1,15 @@
+{
+  "name": "the-new-angular2-framework",
+  "version": "1.0.0",
+  "description": "Presentation slides.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "Angular2",
+    "Presentation"
+  ],
+  "author": "Dave F. Baskin <dfbaskin@gmail.com> (http://dfbaskin.com/)",
+  "license": "MIT"
+}
