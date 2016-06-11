@@ -1,7 +1,7 @@
 
 import {Component} from '@angular/core';
-import {TitlePageComponent} from './slides/title-page.component';
-import {ClosingPageComponent} from './slides/closing-page.component';
+import {TitlePageComponent} from './slides/title-page/title-page.component';
+import {ClosingPageComponent} from './slides/closing-page/closing-page.component';
 
 @Component({
     moduleId: module.id,
