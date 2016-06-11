@@ -1,8 +1,15 @@
 
-import { Component } from '@angular/core';
+import {Component} from '@angular/core';
+import {TitlePageComponent} from './slides/title-page.component';
+import {ClosingPageComponent} from './slides/closing-page.component';
 
 @Component({
+    moduleId: module.id,
     selector: 'my-app',
-    template: '<h1>Presentation</h1>'
+    templateUrl: 'app.component.html',
+    directives: [
+        TitlePageComponent,
+        ClosingPageComponent
+    ]
 })
 export class AppComponent { }
