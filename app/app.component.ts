@@ -1,8 +1,9 @@
 
 import {Component, ViewChildren, QueryList} from '@angular/core';
+import {Location} from '@angular/common';
+import {SlideDirective} from './slide.directive';
 import {TitlePageComponent} from './slides/title-page/title-page.component';
 import {ClosingPageComponent} from './slides/closing-page/closing-page.component';
-import {SlideDirective} from './slide.directive';
 
 @Component({
     moduleId: module.id,
@@ -19,7 +20,14 @@ export class AppComponent {
 
     private currentSlide = 0;
 
+    constructor(private location: Location) {
+    }
+
     ngAfterViewInit() {
+        let idx = Number(this.location.path());
+        if(idx >= 0 && idx < this.slides.length) {
+            this.currentSlide = idx;
+        }
         this.updateSlides();
     }
 
@@ -45,5 +53,6 @@ export class AppComponent {
             .forEach((slide, idx) => {
                 slide.showSlide(idx === this.currentSlide);
             });
+        this.location.go(this.currentSlide.toString());
     }
 }
