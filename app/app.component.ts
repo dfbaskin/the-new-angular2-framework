@@ -20,6 +20,27 @@ export class AppComponent {
     private currentSlide = 0;
 
     ngAfterViewInit() {
+        this.updateSlides();
+    }
+
+    handleKey(evt: KeyboardEvent) {
+        switch(evt.key) {
+            case "ArrowLeft":
+                if(this.currentSlide > 0) {
+                    this.currentSlide -= 1;
+                    this.updateSlides();
+                }
+                break;
+            case "ArrowRight":
+                if(this.currentSlide + 1 < this.slides.length) {
+                    this.currentSlide += 1;
+                    this.updateSlides();
+                }
+                break;
+        }
+    }
+
+    updateSlides() {
         this.slides.toArray()
             .forEach((slide, idx) => {
                 slide.showSlide(idx === this.currentSlide);
