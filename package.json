@@ -11,7 +11,8 @@
     "tsc:w": "tsc -w",
     "css": "node scripts/build-css",
     "css:w": "node scripts/build-css --watch",
-    "typings": "typings"
+    "typings": "typings",
+    "add-slide": "node scripts/add-slide"
   },
   "keywords": [
     "Angular2",
@@ -39,6 +40,7 @@
     "concurrently": "^2.0.0",
     "glob": "^7.0.3",
     "lite-server": "^2.2.0",
+    "lodash": "^4.13.1",
     "postcss": "^5.0.21",
     "postcss-scss": "^0.1.8",
     "precss": "^1.4.0",

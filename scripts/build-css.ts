@@ -1,4 +1,6 @@
 
+import * as fs from 'fs';
+
 let promise = require('bluebird');
 let postcss = require('postcss');
 let chokidar = require('chokidar');
@@ -8,8 +10,8 @@ let postCssPlugins = [
 ];
 
 let glob = promise.promisify(require('glob'));
-let readFile = promise.promisify(require('fs').readFile);
-let writeFile = promise.promisify(require('fs').writeFile);
+let readFile = promise.promisify(fs.readFile);
+let writeFile = promise.promisify(fs.writeFile);
 
 let watchFiles = false;
 let scssFileGlobSpecs = [
