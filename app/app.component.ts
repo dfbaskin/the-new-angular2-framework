@@ -1,7 +1,8 @@
 
-import {Component} from '@angular/core';
+import {Component, ViewChildren, QueryList} from '@angular/core';
 import {TitlePageComponent} from './slides/title-page/title-page.component';
 import {ClosingPageComponent} from './slides/closing-page/closing-page.component';
+import {SlideDirective} from './slide.directive';
 
 @Component({
     moduleId: module.id,
@@ -9,7 +10,19 @@ import {ClosingPageComponent} from './slides/closing-page/closing-page.component
     templateUrl: 'app.component.html',
     directives: [
         TitlePageComponent,
-        ClosingPageComponent
+        ClosingPageComponent,
+        SlideDirective
     ]
 })
-export class AppComponent { }
+export class AppComponent {
+    @ViewChildren(SlideDirective) slides: QueryList<SlideDirective>;
+
+    private currentSlide = 0;
+
+    ngAfterViewInit() {
+        this.slides.toArray()
+            .forEach((slide, idx) => {
+                slide.showSlide(idx === this.currentSlide);
+            });
+    }
+}
