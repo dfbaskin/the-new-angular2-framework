@@ -5,3 +5,5 @@ app/**/*.js
 app/**/*.js.map
 css/**/*.css
 app/**/*.css
+scripts/**/*.js
+scripts/**/*.js.map

@@ -9,8 +9,8 @@
     "postinstall": "typings install",
     "tsc": "tsc",
     "tsc:w": "tsc -w",
-    "css": "node build-css",
-    "css:w": "node build-css --watch",
+    "css": "node scripts/build-css",
+    "css:w": "node scripts/build-css --watch",
     "typings": "typings"
   },
   "keywords": [
