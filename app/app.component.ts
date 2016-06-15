@@ -1,18 +1,16 @@
 
 import {Component, ViewChildren, QueryList} from '@angular/core';
 import {Location} from '@angular/common';
+import {SLIDE_COMPONENTS} from './slides';
 import {SlideDirective} from './slide.directive';
-import {TitlePageComponent} from './slides/title-page/title-page.component';
-import {ClosingPageComponent} from './slides/closing-page/closing-page.component';
 
 @Component({
     moduleId: module.id,
     selector: 'my-app',
     templateUrl: 'app.component.html',
     directives: [
-        TitlePageComponent,
-        ClosingPageComponent,
-        SlideDirective
+        SlideDirective,
+        SLIDE_COMPONENTS
     ]
 })
 export class AppComponent {
