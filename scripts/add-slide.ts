@@ -34,6 +34,24 @@ stat(slidePath)
         ])
         .then(() => details)
     )
+    .then(details => promise
+        .all([
+            details,
+            readFile('app/slides.ts', 'utf8'),
+            readFile('app/app.component.html', 'utf8')
+        ])
+    )
+    .then(data => {
+        let details = data[0];
+        let slidesContent = addComponentArrayElement(details, addComponentImport(details, data[1]));
+        let htmlContent = addHtmlElement(details, data[2]);
+        return promise
+            .all([
+                writeFile('app/slides.ts', slidesContent),
+                writeFile('app/app.component.html', htmlContent)
+            ])
+            .then(() => details)
+    })
     .catch((err) => {
         console.log(err);
     });
@@ -67,4 +85,32 @@ function scssTemplate(details) {
 div {
 }
 `;
+}
+
+function addComponentImport(details, content) {
+    let {componentName, slideName} = details;
+    let importRegex = /[\s\r\n]+export const SLIDE_COMPONENTS/;
+    let importText = `
+import {${componentName}Component} from './slides/${slideName}/${slideName}.component';
+            
+export const SLIDE_COMPONENTS`;
+    return content.replace(importRegex, importText);
+}
+
+function addComponentArrayElement(details, content) {
+    let {componentName} = details;
+    let componentsRegex = /[\s\r\n]+\];/;
+    let componentsText = `,
+    ${details.componentName}Component
+];`;
+    return content.replace(componentsRegex, componentsText);
+}
+
+function addHtmlElement(details, content) {
+    let {slideName} = details;
+    let htmlRegex = /[\s\r\n]+<!-- next slide here -->/;
+    let htmlText = `
+    <${details.slideName} class="slide"></${details.slideName}>
+    <!-- next slide here -->`;
+    return content.replace(htmlRegex, htmlText);
 }
