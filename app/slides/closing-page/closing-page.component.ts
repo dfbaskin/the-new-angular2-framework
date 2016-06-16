@@ -1,14 +1,19 @@
 
 import {Component} from '@angular/core';
+import {UrlResolver} from '@angular/compiler';
 
 @Component({
+    moduleId: module.id,
     selector: 'closing-page',
-    template: `
-
-    <h1>Thanks!</h1>
-    
-    <p>@dfbaskin</p>
-    
-`
+    styleUrls: ['closing-page.component.css'],
+    templateUrl: 'closing-page.component.html'
 })
-export class ClosingPageComponent { }
+export class ClosingPageComponent {
+
+    constructor(private urlResolver: UrlResolver) {
+    }
+
+    public resolvePath(path) {
+        return this.urlResolver.resolve(module.id, path);
+    }
+}
