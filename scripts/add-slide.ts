@@ -80,7 +80,7 @@ function htmlTemplate(details) {
 
 function scssTemplate(details) {
     return `
-// ${details.slideName}
+/* ${details.slideName} */
      
 div {
 }
