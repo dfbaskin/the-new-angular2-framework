@@ -1,5 +1,29 @@
 
-/* angular-progressive-web */
-     
-div {
+div.content {
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  h1 {
+
+    font-size: 5vh;
+    font-weight: bold;
+    margin-bottom: 5vh;
+
+    img {
+      display: inline-block;
+      height: 10vh;
+    }
+  }
+
+  li {
+    font-size: 3.5vh;
+    margin-bottom: 1vh;
+    > ul {
+      margin-top: 1vh;
+    }
+  }
+
 }

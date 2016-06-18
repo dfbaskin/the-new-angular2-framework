@@ -20,6 +20,7 @@ import {ManyHatsComponent} from './slides/many-hats/many-hats.component';
 import {AngularUniversalComponent} from './slides/angular-universal/angular-universal.component';
 import {AngularNativescriptComponent} from './slides/angular-nativescript/angular-nativescript.component';
 import {AngularProgressiveWebComponent} from './slides/angular-progressive-web/angular-progressive-web.component';
+import {AngularElectronComponent} from './slides/angular-electron/angular-electron.component';
             
 export const SLIDE_COMPONENTS = [
     TitlePageComponent,
@@ -42,5 +43,6 @@ export const SLIDE_COMPONENTS = [
     ManyHatsComponent,
     AngularUniversalComponent,
     AngularNativescriptComponent,
-    AngularProgressiveWebComponent
+    AngularProgressiveWebComponent,
+    AngularElectronComponent
 ];
