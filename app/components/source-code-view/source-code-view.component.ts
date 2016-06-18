@@ -26,10 +26,6 @@ export class SourceCodeViewComponent implements OnInit{
     }
 
     ngOnInit() {
-        console.log("lang:", this.language);
-        console.log("path:", this.relativeTo);
-        console.log("file:", this.name);
-
         this.sourceCodeLanguage = `language-${this.language}`;
         let contentUrl = this.urlResolver.resolve(this.relativeTo, this.name);
         this.http.get(contentUrl)
