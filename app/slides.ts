@@ -17,6 +17,9 @@ import {SocketObservableExampleComponent} from './slides/socket-observable-examp
 import {RoutingComponent} from './slides/routing/routing.component';
 import {OtherFeaturesComponent} from './slides/other-features/other-features.component';
 import {ManyHatsComponent} from './slides/many-hats/many-hats.component';
+import {AngularUniversalComponent} from './slides/angular-universal/angular-universal.component';
+import {AngularNativescriptComponent} from './slides/angular-nativescript/angular-nativescript.component';
+import {AngularProgressiveWebComponent} from './slides/angular-progressive-web/angular-progressive-web.component';
             
 export const SLIDE_COMPONENTS = [
     TitlePageComponent,
@@ -36,5 +39,8 @@ export const SLIDE_COMPONENTS = [
     SocketObservableExampleComponent,
     RoutingComponent,
     OtherFeaturesComponent,
-    ManyHatsComponent
+    ManyHatsComponent,
+    AngularUniversalComponent,
+    AngularNativescriptComponent,
+    AngularProgressiveWebComponent
 ];
