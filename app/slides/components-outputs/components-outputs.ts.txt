@@ -1,0 +1,17 @@
+@Component({
+  selector: 'confirmation',
+  template: `
+    <div>
+      ... Some Content ...
+      <button (click)="ok()">OK</button>
+      <button (click)="cancel()">Cancel</button>
+    </div>
+  `
+})
+export class ConfirmationComponent {
+    @Output confirmed = new EventEmitter();
+    @Output cancelled = new EventEmitter();
+
+    ok() { this.confirmed.emit(); }
+    cancel() { this.cancelled.emit(); }
+}

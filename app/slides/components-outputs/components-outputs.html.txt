@@ -1,0 +1,1 @@
+<confirmation (confirmed)="..." (cancelled)="..."></confirmation>
