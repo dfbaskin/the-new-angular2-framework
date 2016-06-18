@@ -1,0 +1,5 @@
+<div *ngFor="let hero of heroes">{{hero}}</div>
+<!-- or -->
+<template ngFor let-hero [ngForOf]="heroes">
+  <div>{{hero}}</div>
+</template>

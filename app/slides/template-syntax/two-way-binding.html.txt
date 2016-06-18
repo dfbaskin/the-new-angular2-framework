@@ -1,0 +1,3 @@
+<input [(ngModel)]="heroName">
+<!-- or -->
+<input bindon-ngModel="heroName">

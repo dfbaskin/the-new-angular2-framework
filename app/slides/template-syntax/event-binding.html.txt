@@ -1,0 +1,3 @@
+<button (click)="doSomething()"></button>
+<!-- or -->
+<button on-click="doSomething()"></button>

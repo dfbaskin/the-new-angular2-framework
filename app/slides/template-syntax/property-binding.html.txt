@@ -1,0 +1,3 @@
+<img [src]="myImageRef">
+<!-- or -->
+<img bind-src="myImageRef">

@@ -1,0 +1,1 @@
+<div>{{myText}}</div>
