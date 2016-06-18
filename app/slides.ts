@@ -14,6 +14,7 @@ import {DependencyInjectionComponent} from './slides/dependency-injection/depend
 import {ObservablesComponent} from './slides/observables/observables.component';
 import {WhyNotPromisesComponent} from './slides/why-not-promises/why-not-promises.component';
 import {SocketObservableExampleComponent} from './slides/socket-observable-example/socket-observable-example.component';
+import {RoutingComponent} from './slides/routing/routing.component';
             
 export const SLIDE_COMPONENTS = [
     TitlePageComponent,
@@ -30,5 +31,6 @@ export const SLIDE_COMPONENTS = [
     DependencyInjectionComponent,
     ObservablesComponent,
     WhyNotPromisesComponent,
-    SocketObservableExampleComponent
+    SocketObservableExampleComponent,
+    RoutingComponent
 ];
