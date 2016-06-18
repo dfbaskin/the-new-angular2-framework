@@ -8,6 +8,7 @@ import {ComponentsOverviewComponent} from './slides/components-overview/componen
 import {ComponentsInputsComponent} from './slides/components-inputs/components-inputs.component';
 import {ComponentsOutputsComponent} from './slides/components-outputs/components-outputs.component';
 import {ComponentsTreeComponent} from './slides/components-tree/components-tree.component';
+import {ComponentsSmartDumbComponent} from './slides/components-smart-dumb/components-smart-dumb.component';
             
 export const SLIDE_COMPONENTS = [
     TitlePageComponent,
@@ -18,5 +19,6 @@ export const SLIDE_COMPONENTS = [
     ComponentsOverviewComponent,
     ComponentsInputsComponent,
     ComponentsOutputsComponent,
-    ComponentsTreeComponent
+    ComponentsTreeComponent,
+    ComponentsSmartDumbComponent
 ];
