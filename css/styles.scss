@@ -17,3 +17,12 @@ body {
   right: 0;
   bottom: 0;
 }
+
+.content {
+  position: absolute;
+  top: 5vh;
+  bottom: 5vh;
+  left: 5vw;
+  right: 5vw;
+  overflow: auto;
+}
