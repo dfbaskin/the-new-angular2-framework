@@ -1,5 +1,14 @@
 
-/* react-overview */
-     
-div {
+div.content {
+
+  text-align: center;
+
+  h1 {
+    font-size: 10vh;
+    font-weight: bold;
+  }
+
+  img {
+    height: 50vh;
+  }
 }
