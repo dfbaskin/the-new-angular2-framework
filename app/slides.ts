@@ -11,6 +11,9 @@ import {ComponentsTreeComponent} from './slides/components-tree/components-tree.
 import {ComponentsSmartDumbComponent} from './slides/components-smart-dumb/components-smart-dumb.component';
 import {TemplateSyntaxComponent} from './slides/template-syntax/template-syntax.component';
 import {DependencyInjectionComponent} from './slides/dependency-injection/dependency-injection.component';
+import {ObservablesComponent} from './slides/observables/observables.component';
+import {WhyNotPromisesComponent} from './slides/why-not-promises/why-not-promises.component';
+import {SocketObservableExampleComponent} from './slides/socket-observable-example/socket-observable-example.component';
             
 export const SLIDE_COMPONENTS = [
     TitlePageComponent,
@@ -24,5 +27,8 @@ export const SLIDE_COMPONENTS = [
     ComponentsTreeComponent,
     ComponentsSmartDumbComponent,
     TemplateSyntaxComponent,
-    DependencyInjectionComponent
+    DependencyInjectionComponent,
+    ObservablesComponent,
+    WhyNotPromisesComponent,
+    SocketObservableExampleComponent
 ];
