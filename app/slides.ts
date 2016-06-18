@@ -7,6 +7,7 @@ import {GeneralDifferencesComponent} from './slides/general-differences/general-
 import {ComponentsOverviewComponent} from './slides/components-overview/components-overview.component';
 import {ComponentsInputsComponent} from './slides/components-inputs/components-inputs.component';
 import {ComponentsOutputsComponent} from './slides/components-outputs/components-outputs.component';
+import {ComponentsTreeComponent} from './slides/components-tree/components-tree.component';
             
 export const SLIDE_COMPONENTS = [
     TitlePageComponent,
@@ -16,5 +17,6 @@ export const SLIDE_COMPONENTS = [
     GeneralDifferencesComponent,
     ComponentsOverviewComponent,
     ComponentsInputsComponent,
-    ComponentsOutputsComponent
+    ComponentsOutputsComponent,
+    ComponentsTreeComponent
 ];

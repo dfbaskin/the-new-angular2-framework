@@ -1,0 +1,6 @@
+
+<div (click)="toggleShowOptimized()">
+    <h1>Component Tree</h1>
+    <img [src]="resolvePath('component-tree.svg')" *ngIf="!showOptimized">
+    <img [src]="resolvePath('component-tree-optimized.svg')" *ngIf="showOptimized">
+</div>
