@@ -1,5 +1,18 @@
 
-/* routing */
-     
-div {
+div.content {
+
+  text-align: center;
+
+  > h1 {
+    font-size: 5vh;
+    font-weight: bold;
+    margin-bottom: 0;
+  }
+
+  > img {
+    padding: 0;
+    margin: 0;
+    height: 80vh;
+  }
+
 }
