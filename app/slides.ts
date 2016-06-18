@@ -10,6 +10,7 @@ import {ComponentsOutputsComponent} from './slides/components-outputs/components
 import {ComponentsTreeComponent} from './slides/components-tree/components-tree.component';
 import {ComponentsSmartDumbComponent} from './slides/components-smart-dumb/components-smart-dumb.component';
 import {TemplateSyntaxComponent} from './slides/template-syntax/template-syntax.component';
+import {DependencyInjectionComponent} from './slides/dependency-injection/dependency-injection.component';
             
 export const SLIDE_COMPONENTS = [
     TitlePageComponent,
@@ -22,5 +23,6 @@ export const SLIDE_COMPONENTS = [
     ComponentsOutputsComponent,
     ComponentsTreeComponent,
     ComponentsSmartDumbComponent,
-    TemplateSyntaxComponent
+    TemplateSyntaxComponent,
+    DependencyInjectionComponent
 ];
