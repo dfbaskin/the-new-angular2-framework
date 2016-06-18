@@ -15,6 +15,7 @@ import {ObservablesComponent} from './slides/observables/observables.component';
 import {WhyNotPromisesComponent} from './slides/why-not-promises/why-not-promises.component';
 import {SocketObservableExampleComponent} from './slides/socket-observable-example/socket-observable-example.component';
 import {RoutingComponent} from './slides/routing/routing.component';
+import {OtherFeaturesComponent} from './slides/other-features/other-features.component';
             
 export const SLIDE_COMPONENTS = [
     TitlePageComponent,
@@ -32,5 +33,6 @@ export const SLIDE_COMPONENTS = [
     ObservablesComponent,
     WhyNotPromisesComponent,
     SocketObservableExampleComponent,
-    RoutingComponent
+    RoutingComponent,
+    OtherFeaturesComponent
 ];
