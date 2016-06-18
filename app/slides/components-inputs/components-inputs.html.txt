@@ -1,0 +1,1 @@
+<my-hero-detail [hero]="myHeroInstance"></my-hero-detail>

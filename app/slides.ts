@@ -5,6 +5,7 @@ import {OverviewPageComponent} from './slides/overview-page/overview-page.compon
 import {ReactOverviewComponent} from './slides/react-overview/react-overview.component';
 import {GeneralDifferencesComponent} from './slides/general-differences/general-differences.component';
 import {ComponentsOverviewComponent} from './slides/components-overview/components-overview.component';
+import {ComponentsInputsComponent} from './slides/components-inputs/components-inputs.component';
             
 export const SLIDE_COMPONENTS = [
     TitlePageComponent,
@@ -12,5 +13,6 @@ export const SLIDE_COMPONENTS = [
     OverviewPageComponent,
     ReactOverviewComponent,
     GeneralDifferencesComponent,
-    ComponentsOverviewComponent
+    ComponentsOverviewComponent,
+    ComponentsInputsComponent
 ];
