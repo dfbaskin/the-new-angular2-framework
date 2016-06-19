@@ -2,7 +2,7 @@
 import {Component, ViewChildren, QueryList} from '@angular/core';
 import {Location} from '@angular/common';
 import {SLIDE_COMPONENTS} from './slides';
-import {SlideDirective} from './slide.directive';
+import {SlideDirective} from './components/slide/slide.directive';
 
 @Component({
     moduleId: module.id,
