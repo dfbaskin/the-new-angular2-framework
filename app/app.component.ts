@@ -26,7 +26,7 @@ export class AppComponent {
         if(idx >= 0 && idx < this.slides.length) {
             this.currentSlide = idx;
         }
-        this.updateSlides();
+        setTimeout(() => this.updateSlides());
     }
 
     handleKey(evt: KeyboardEvent) {
@@ -49,7 +49,7 @@ export class AppComponent {
     updateSlides() {
         this.slides.toArray()
             .forEach((slide, idx) => {
-                slide.showSlide(idx === this.currentSlide);
+                slide.viewSlide = idx === this.currentSlide;
             });
         this.location.go(this.currentSlide.toString());
     }

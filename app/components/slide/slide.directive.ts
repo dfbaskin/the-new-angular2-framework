@@ -1,14 +1,26 @@
 
-import { Directive, ElementRef, Input } from '@angular/core';
+import {Directive, Input, TemplateRef, ViewContainerRef} from '@angular/core';
 
 @Directive({
-    selector: '.slide'
+    selector: '[viewSlide]'
 })
 export class SlideDirective {
-    constructor(private elem: ElementRef) {
+
+    private lastCondition: boolean = false;
+
+    constructor(
+        private templateRef: TemplateRef<any>,
+        private viewContainer: ViewContainerRef) {
     }
 
-    public showSlide(show: boolean) {
-        this.elem.nativeElement.style.opacity = show ? 1 : 0;
+    @Input() set viewSlide(condition: boolean) {
+        if(condition != this.lastCondition) {
+            if (condition) {
+                this.viewContainer.createEmbeddedView(this.templateRef);
+            } else {
+                this.viewContainer.clear();
+            }
+            this.lastCondition = condition;
+        }
     }
 }

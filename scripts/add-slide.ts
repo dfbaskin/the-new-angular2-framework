@@ -72,7 +72,7 @@ export class ${details.componentName}Component { }
 
 function htmlTemplate(details) {
     return `
-<div>
+<div class="content">
     <h1>${details.slideName}</h1>
 </div>
 `;
@@ -80,9 +80,7 @@ function htmlTemplate(details) {
 
 function scssTemplate(details) {
     return `
-/* ${details.slideName} */
-     
-div {
+div.content {
 }
 `;
 }
@@ -110,7 +108,7 @@ function addHtmlElement(details, content) {
     let {slideName} = details;
     let htmlRegex = /[\s\r\n]+<!-- next slide here -->/;
     let htmlText = `
-    <${details.slideName} class="slide"></${details.slideName}>
+    <${details.slideName} *viewSlide="false"></${details.slideName}>
     <!-- next slide here -->`;
     return content.replace(htmlRegex, htmlText);
 }
